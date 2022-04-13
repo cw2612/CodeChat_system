@@ -421,3 +421,28 @@ function parse_for_errors(errors_html) {
         errNum + warningNum > 0,
     ];
 }
+
+function window_onclick(){
+    clearHighlight();
+
+    var r = window.getSelection().getRangeAt(0).cloneRange();
+
+    r.setStartBefore(document.body);
+
+    var rStr = r.cloneContents().textContent.toString();
+
+
+    send_to_codechat_server("sync_text", rStr);
+
+}
+
+function clearHighlight(){
+    var highlighter = getHighlight();
+    if(highlighter){
+        highlighter.remove();
+    }
+}
+
+function getHighlight(){
+    return document.getElementById("highlighter");
+}
