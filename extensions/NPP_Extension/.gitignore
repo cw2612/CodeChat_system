@@ -1,0 +1,6 @@
+#ignore boost
+src/boost
+
+#ignore thrift
+src/thrift
+
