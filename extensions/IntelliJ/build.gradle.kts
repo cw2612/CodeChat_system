@@ -34,12 +34,6 @@ intellij {
     plugins.set(properties("platformPlugins").split(',').map(String::trim).filter(String::isNotEmpty))
 }
 
-// Configure Gradle Changelog Plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
-changelog {
-    version.set(properties("pluginVersion"))
-    groups.set(emptyList())
-}
-
 // Configure Gradle Qodana Plugin - read more: https://github.com/JetBrains/gradle-qodana-plugin
 qodana {
     cachePath.set(projectDir.resolve(".qodana").canonicalPath)
@@ -82,12 +76,7 @@ tasks {
             }.joinToString("\n").run { markdownToHTML(this) }
         )
 
-        // Get the latest available change notes from the changelog file
-        changeNotes.set(provider {
-            changelog.run {
-                getOrNull(properties("pluginVersion")) ?: getLatest()
-            }.toHTML()
-        })
+        changeNotes.set("<p>See the <a href=\"https://codechat-system.readthedocs.io/en/latest/docs/CHANGELOG.html\">CodeChat System changelog</a>.</p>")
     }
 
     // Configure UI tests plugin
