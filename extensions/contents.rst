@@ -18,6 +18,7 @@ This directory contains documentation for all supported text editor/IDE extensio
 
     VSCode/contents
     universal
+    IntelliJ/contents
 
 
 See also the `developer docs <developer>`.
