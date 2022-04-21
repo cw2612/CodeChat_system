@@ -1,16 +1,54 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<!--
+*************************************
+|docname| - Plugin Configuration File
+*************************************
+See the `docs <https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html>`_. Much of this file's comment was copied from that link.
+
+TODO: add a ``url`` attribute to the ``<idea-plugin>`` tag giving the URL of this plugin's docs on ReadTheDocs.
+
+``idea-plugin``: An optional "url" attribute specifies the link to the plugin homepage.
+It is displayed on the plugin page in the Marketplace.
+-->
 <idea-plugin>
+    <!--
+    Unique identifier of the plugin. It should be a fully qualified name
+    including namespace to not collide with existing plugins. It cannot be
+    changed between the plugin versions. If not specified, <name> will be
+    used (not recommended).
+    -->
     <id>com.github.bjones1.intellijaplugin</id>
-    <name>intellija-plugin</name>
+
+    <!-- Public plugin name. It should use Title Cases. See the `Guidelines <https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name>`_.
+  -->
+    <name>CodeChat</name>
+
+    <!--
+    Vendor name or Organization ID (if you have one created).
+    Attributes:
+
+    - "url" (optional) - specifies the link to the vendor's homepage
+    - "email" (optional) - specifies the vendor's email address
+
+    Displayed on the Plugins Page.
+    -->
     <vendor>bjones1</vendor>
 
+    <!--
+    Product and plugin compatibility requirements. See `docs <https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html>`__.
+    -->
     <depends>com.intellij.modules.platform</depends>
 
+    <!--
+    Custom extensions declaration. For more information, see `declaring extensions <https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html#declaring-extensions>`_.
+    -->
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.bjones1.intellijaplugin.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.bjones1.intellijaplugin.services.MyProjectService"/>
     </extensions>
 
+    <!--
+    `Application-level listeners <https://plugins.jetbrains.com/docs/intellij/plugin-listeners.html#defining-application-level-listeners>`_.
+    -->
     <applicationListeners>
         <listener class="com.github.bjones1.intellijaplugin.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
