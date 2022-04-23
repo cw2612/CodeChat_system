@@ -1,3 +1,8 @@
+// *******************************
+// |docname| - Gradle build script
+// *******************************
+// See the `Gradle docs <https://docs.gradle.org/current/userguide/tutorial_using_tasks.html>`_. This was mostly taken from the IntelliJ template plugin.
+
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
@@ -25,7 +30,11 @@ repositories {
 }
 
 dependencies {
-    implementation("org.apache.thrift:libthrift:0.16.0")
+    // The Apache Thrift Java libraries are required. Pull the `compiled library <https://search.maven.org/artifact/org.apache.thrift/libthrift>`_ from the `central Maven repository <https://search.maven.org/>`_. The other option is to build these libraries manually, following the `Thrift Java build procedure <https://github.com/apache/thrift/blob/master/lib/java/README.md#building-thrift-with-gradle-without-cmakeautoconf>`_.
+    implementation("org.apache.thrift:libthrift:0.16.0") {
+        // However, this by default will reference logging that produces the error ``Caused by: java.lang.LinkageError: loader constraint violation: when resolving method 'org.slf4j.ILoggerFactory org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()' the class loader com.intellij.ide.plugins.cl.PluginClassLoader @794e9ee9 of the current class, org/slf4j/LoggerFactory, and the class loader com.intellij.util.lang.PathClassLoader @4bbfb90a for the method's defining class, org/slf4j/impl/StaticLoggerBinder, have different Class objects for the type org/slf4j/ILoggerFactory used in the signature (org.slf4j.LoggerFactory is in unnamed module of loader com.intellij.ide.plugins.cl.PluginClassLoader @794e9ee9, parent loader 'bootstrap'; org.slf4j.impl.StaticLoggerBinder is in unnamed module of loader com.intellij.util.lang.PathClassLoader @4bbfb90a, parent loader 'platform')``. To fix this, exclude the offending library, which appeared in the "External libraries" folder of the Project task pane.
+        exclude(group = "org.slf4j", module = "slf4j-api")
+    }
 }
 
 // Configure Gradle IntelliJ Plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin

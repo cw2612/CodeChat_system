@@ -1,3 +1,6 @@
+// ****************
+// |docname| - TODO
+// ****************
 package com.github.bjones1.intellijaplugin
 
 import com.intellij.DynamicBundle
