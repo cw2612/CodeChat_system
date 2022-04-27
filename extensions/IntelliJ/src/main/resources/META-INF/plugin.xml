@@ -49,13 +49,13 @@ It is displayed on the plugin page in the Marketplace.
 
         -   Choose a parentId of ``language`` because that's where the Markdown settings are, and CodeChat seems similar in spirit in some ways.
         -   TODO: instance is a subclass of ``Configurable`` which defines all the CodeChat settings. It seems like id is the same thing.
-        -->
         <applicationConfigurable
                 parentId="language"
                 instance="com.github.bjones1.intellij.codechat.Settings"
                 id="com.github.bjones1.intellij.codechat.Settings"
                 displayName="CodeChat"
         />
+        -->
     </extensions>
 
 

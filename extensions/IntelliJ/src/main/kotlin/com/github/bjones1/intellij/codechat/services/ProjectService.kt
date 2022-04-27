@@ -11,7 +11,7 @@ import com.intellij.openapi.components.Service
 import com.intellij.openapi.components.service
 
 @Service
-class MyProjectService(project: Project) {
+class ProjectService(project: Project) {
 
     // TODO: store a client ID; stop that client in dispose().
 
@@ -19,7 +19,7 @@ class MyProjectService(project: Project) {
         println(MyBundle.message("projectService", project.name))
 
         try {
-            val applicationService = service<MyApplicationService>()
+            val applicationService = service<ApplicationService>()
             applicationService.client!!.ping()
         } catch (x: TException) {
             x.printStackTrace()

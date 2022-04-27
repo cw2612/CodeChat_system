@@ -86,5 +86,5 @@ Source
     src/main/resources/META-INF/plugin.xml
     src/main/kotlin/com/github/bjones1/intellij/codechat/MyBundle.kt
     src/main/kotlin/com/github/bjones1/intellij/codechat/listeners/MyProjectManagerListener.kt
-    src/main/kotlin/com/github/bjones1/intellij/codechat/services/MyApplicationService.kt
-    src/main/kotlin/com/github/bjones1/intellij/codechat/services/MyProjectService.kt
+    src/main/kotlin/com/github/bjones1/intellij/codechat/services/ApplicationService.kt
+    src/main/kotlin/com/github/bjones1/intellij/codechat/services/ProjectService.kt

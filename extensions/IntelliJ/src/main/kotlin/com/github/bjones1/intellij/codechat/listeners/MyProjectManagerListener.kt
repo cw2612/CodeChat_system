@@ -9,11 +9,11 @@ package com.github.bjones1.intellij.codechat.listeners
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
-import com.github.bjones1.intellij.codechat.services.MyProjectService
+import com.github.bjones1.intellij.codechat.services.ProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
 
     override fun projectOpened(project: Project) {
-        project.service<MyProjectService>()
+        project.service<ProjectService>()
     }
 }
