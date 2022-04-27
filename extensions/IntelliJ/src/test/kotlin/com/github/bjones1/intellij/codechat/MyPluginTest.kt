@@ -1,4 +1,4 @@
-package com.github.bjones1.intellijaplugin
+package com.github.bjones1.intellij.codechat
 
 import com.intellij.ide.highlighter.XmlFileType
 import com.intellij.psi.xml.XmlFile

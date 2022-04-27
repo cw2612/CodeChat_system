@@ -18,7 +18,7 @@ It is displayed on the plugin page in the Marketplace.
 
     TODO: Update this name!
     -->
-    <id>com.github.bjones1.intellijaplugin</id>
+    <id>com.github.bjones1.intellij.codechat</id>
 
     <!-- Public plugin name. It should use Title Cases. See the `Guidelines <https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name>`_.
   -->
@@ -44,8 +44,8 @@ It is displayed on the plugin page in the Marketplace.
     Custom extensions declaration. For more information, see `declaring extensions <https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html#declaring-extensions>`_.
     -->
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.bjones1.intellijaplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.bjones1.intellijaplugin.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.github.bjones1.intellij.codechat.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.github.bjones1.intellij.codechat.services.MyProjectService"/>
         <!--
         Declare a `setting <https://plugins.jetbrains.com/docs/intellij/settings-guide.html>`_ to hold the path to the CodeChat Server executable.
 
@@ -54,8 +54,8 @@ It is displayed on the plugin page in the Marketplace.
         -->
         <applicationConfigurable
                 parentId="language"
-                instance="com.github.bjones1.intellijaplugin.Settings"
-                id="com.github.bjones1.intellijaplugin.Settings"
+                instance="com.github.bjones1.intellij.codechat.Settings"
+                id="com.github.bjones1.intellij.codechat.Settings"
                 displayName="CodeChat"
         />
     </extensions>
@@ -65,7 +65,7 @@ It is displayed on the plugin page in the Marketplace.
     `Application-level listeners <https://plugins.jetbrains.com/docs/intellij/plugin-listeners.html#defining-application-level-listeners>`_.
     -->
     <applicationListeners>
-        <listener class="com.github.bjones1.intellijaplugin.listeners.MyProjectManagerListener"
+        <listener class="com.github.bjones1.intellij.codechat.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>

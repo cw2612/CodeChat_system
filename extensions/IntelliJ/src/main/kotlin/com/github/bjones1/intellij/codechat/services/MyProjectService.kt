@@ -2,17 +2,17 @@
 // |docname| - Define plugin project services
 // ******************************************
 // This defines a single plugin component per project. See the `docs <https://plugins.jetbrains.com/docs/intellij/plugin-services.html>`__.
-package com.github.bjones1.intellijaplugin.services
+package com.github.bjones1.intellij.codechat.services
 
-import com.github.bjones1.intellijaplugin.MyBundle
+import com.github.bjones1.intellij.codechat.MyBundle
 import com.intellij.openapi.project.Project
 import org.apache.thrift.TException
 import org.apache.thrift.protocol.TBinaryProtocol
 import org.apache.thrift.protocol.TProtocol
 import org.apache.thrift.transport.TSocket
 import org.apache.thrift.transport.TTransport
-import com.github.bjones1.intellijaplugin.gen_java.CodeChat_ServicesConstants.THRIFT_PORT
-import com.github.bjones1.intellijaplugin.gen_java.EditorPlugin
+import com.github.bjones1.intellij.codechat.gen_java.CodeChat_ServicesConstants.THRIFT_PORT
+import com.github.bjones1.intellij.codechat.gen_java.EditorPlugin
 
 
 class MyProjectService(project: Project) {

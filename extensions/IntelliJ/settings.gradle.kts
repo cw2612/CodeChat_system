@@ -1,1 +1,1 @@
-rootProject.name = "intellija-plugin"
+rootProject.name = "IntelliJ-CodeChat-plugin"

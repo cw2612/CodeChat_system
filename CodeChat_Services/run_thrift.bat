@@ -25,4 +25,4 @@ mkdir ..\CodeChat_Server\CodeChat_Server\gen_py
 thrift-0.16.0.exe --gen py --strict -out ..\CodeChat_Server\CodeChat_Server\gen_py CodeChat_Services.thrift
 thrift-0.16.0.exe --gen js:node,ts --strict -o ..\extensions\VSCode\src CodeChat_Services.thrift
 mkdir ..\extensions\IntelliJ\src\main\java\com\github\bjones1\intellijaplugin\gen_java
-thrift-0.16.0.exe --gen java --strict --out ..\extensions\IntelliJ\src\main\java\com\github\bjones1\intellijaplugin\gen_java CodeChat_Services.thrift
+thrift-0.16.0.exe --gen java --strict --out ..\extensions\IntelliJ\src\main\java\com\github\bjones1\intellij\codechat\gen_java CodeChat_Services.thrift

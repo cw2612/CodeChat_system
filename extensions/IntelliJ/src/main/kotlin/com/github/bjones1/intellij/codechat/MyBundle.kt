@@ -1,7 +1,7 @@
 // ****************
 // |docname| - TODO
 // ****************
-package com.github.bjones1.intellijaplugin
+package com.github.bjones1.intellij.codechat
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
