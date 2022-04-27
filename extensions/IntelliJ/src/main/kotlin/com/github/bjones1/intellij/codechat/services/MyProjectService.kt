@@ -13,8 +13,9 @@ import org.apache.thrift.transport.TSocket
 import org.apache.thrift.transport.TTransport
 import com.github.bjones1.intellij.codechat.gen_java.CodeChat_ServicesConstants.THRIFT_PORT
 import com.github.bjones1.intellij.codechat.gen_java.EditorPlugin
+import com.intellij.openapi.components.Service
 
-
+@Service
 class MyProjectService(project: Project) {
 
     init {

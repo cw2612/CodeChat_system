@@ -44,8 +44,6 @@ It is displayed on the plugin page in the Marketplace.
     Custom extensions declaration. For more information, see `declaring extensions <https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html#declaring-extensions>`_.
     -->
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.bjones1.intellij.codechat.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.bjones1.intellij.codechat.services.MyProjectService"/>
         <!--
         Declare a `setting <https://plugins.jetbrains.com/docs/intellij/settings-guide.html>`_ to hold the path to the CodeChat Server executable.
 

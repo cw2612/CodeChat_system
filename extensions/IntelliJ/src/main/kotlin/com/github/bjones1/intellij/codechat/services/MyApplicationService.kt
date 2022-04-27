@@ -5,7 +5,9 @@
 package com.github.bjones1.intellij.codechat.services
 
 import com.github.bjones1.intellij.codechat.MyBundle
+import com.intellij.openapi.components.Service
 
+@Service
 class MyApplicationService {
 
     init {
