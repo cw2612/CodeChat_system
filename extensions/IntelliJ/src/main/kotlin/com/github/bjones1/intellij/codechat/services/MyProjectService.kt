@@ -13,6 +13,8 @@ import com.intellij.openapi.components.service
 @Service
 class MyProjectService(project: Project) {
 
+    // TODO: store a client ID; stop that client in dispose().
+
     init {
         println(MyBundle.message("projectService", project.name))
 

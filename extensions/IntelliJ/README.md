@@ -1,4 +1,4 @@
-# intellija-plugin
+# IntelliJ CodeChat plugin
 
 ![Build](https://github.com/bjones1/intellija-plugin/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)

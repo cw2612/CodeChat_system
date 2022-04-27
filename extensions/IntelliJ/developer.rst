@@ -3,6 +3,10 @@ Developer documentation
 ***********************
 This plugin was created following the `IntelliJ docs <https://plugins.jetbrains.com/docs/intellij/getting-started.html>`_ using their `GitHub template <https://plugins.jetbrains.com/docs/intellij/github-template.html>`_.
 
+Architecture
+============
+An application-wide service stores the Thrift transport and client. A getter on the client starts the server and opens the transport as necessary before returning a working client; it also properly closes the transport using a dispose() override.
+
 
 Plan
 ====
@@ -80,7 +84,7 @@ Source
     build.gradle.kts
     gradle.properties
     src/main/resources/META-INF/plugin.xml
-    src/main/kotlin/com/github/bjones1/intellijaplugin/MyBundle.kt
-    src/main/kotlin/com/github/bjones1/intellijaplugin/listeners/MyProjectManagerListener.kt
-    src/main/kotlin/com/github/bjones1/intellijaplugin/services/MyApplicationService.kt
-    src/main/kotlin/com/github/bjones1/intellijaplugin/services/MyProjectService.kt
+    src/main/kotlin/com/github/bjones1/intellij/codechat/MyBundle.kt
+    src/main/kotlin/com/github/bjones1/intellij/codechat/listeners/MyProjectManagerListener.kt
+    src/main/kotlin/com/github/bjones1/intellij/codechat/services/MyApplicationService.kt
+    src/main/kotlin/com/github/bjones1/intellij/codechat/services/MyProjectService.kt
