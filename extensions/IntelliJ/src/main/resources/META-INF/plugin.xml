@@ -46,7 +46,20 @@ It is displayed on the plugin page in the Marketplace.
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.bjones1.intellijaplugin.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.bjones1.intellijaplugin.services.MyProjectService"/>
+        <!--
+        Declare a `setting <https://plugins.jetbrains.com/docs/intellij/settings-guide.html>`_ to hold the path to the CodeChat Server executable.
+
+        -   Choose a parentId of ``language`` because that's where the Markdown settings are, and CodeChat seems similar in spirit in some ways.
+        -   TODO: instance is a subclass of ``Configurable`` which defines all the CodeChat settings. It seems like id is the same thing.
+        -->
+        <applicationConfigurable
+                parentId="language"
+                instance="com.github.bjones1.intellijaplugin.Settings"
+                id="com.github.bjones1.intellijaplugin.Settings"
+                displayName="CodeChat"
+        />
     </extensions>
+
 
     <!--
     `Application-level listeners <https://plugins.jetbrains.com/docs/intellij/plugin-listeners.html#defining-application-level-listeners>`_.
