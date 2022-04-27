@@ -6,7 +6,7 @@ This plugin was created following the `IntelliJ docs <https://plugins.jetbrains.
 
 Plan
 ====
--   Create two application-wide `settings <https://plugins.jetbrains.com/docs/intellij/settings.html>`_: the path to CodeChat and where to display (browser or in IDE). To open a link in the browser, see `here <https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000018690-Open-url-from-Idea-programaticly->`__.
+-   Create an application-wide `setting <https://plugins.jetbrains.com/docs/intellij/settings.html>`_: the path to the CodeChat Server executable. To open a link in the browser, see `here <https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000018690-Open-url-from-Idea-programaticly->`__.
 -   Create a project-wide menu item (an `action <https://plugins.jetbrains.com/docs/intellij/plugin-actions.html>`_) named "Enable/disable CodeChat".
 -   Create an application `service <https://plugins.jetbrains.com/docs/intellij/plugin-services.html>`_ that starts the server and connects to Thrift. It has a "get Thrift client" function.
 -   Have a project service_ that stores the client ID for that project.
