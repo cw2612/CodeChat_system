@@ -10,9 +10,7 @@ An application-wide service stores the Thrift transport and client. A getter on 
 
 Plan
 ====
--   Create an application-wide `setting <https://plugins.jetbrains.com/docs/intellij/settings.html>`_: the path to the CodeChat Server executable. To open a link in the browser, see `here <https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000018690-Open-url-from-Idea-programaticly->`__.
 -   Create a project-wide menu item (an `action <https://plugins.jetbrains.com/docs/intellij/plugin-actions.html>`_) named "Enable/disable CodeChat".
--   Create an application `service <https://plugins.jetbrains.com/docs/intellij/plugin-services.html>`_ that starts the server and connects to Thrift. It has a "get Thrift client" function.
 -   Have a project service_ that stores the client ID for that project.
 -   Use `editor hints <https://plugins.jetbrains.com/docs/intellij/notifications.html#editor-hints>`_ to report errors; use `balloons <https://plugins.jetbrains.com/docs/intellij/notifications.html#top-level-notifications-balloons>`_ for informational messages.
 -   Need to use a `Java Timer <https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Timer.html>`_ to render at a good time.
@@ -61,7 +59,7 @@ Plan
 Questions:
 
 -   Is there some callback for when the Thrift connection dies?
--   The `Markdown plugin <https://www.jetbrains.com/help/idea/markdown.html>`_ provide a nice split-screen environment. See https://github.com/JetBrains/intellij-community/tree/master/plugins/markdown. How can I use the Markdown plugin's GUI, but none of its parsing/logic. If not, fall back to:
+-   The `Markdown plugin <https://www.jetbrains.com/help/idea/markdown.html>`_ provides a nice split-screen environment. See https://github.com/JetBrains/intellij-community/tree/master/plugins/markdown. How can I use the Markdown plugin's GUI, but none of its parsing/logic. If not, fall back to:
 
     -   `JCEF - Java Chromium Embedded Framework <https://plugins.jetbrains.com/docs/intellij/jcef.html>`_.
     -   Send updates on edits, possibly using the `DocumentListener <https://upsource.jetbrains.com/idea-ce/file/idea-ce-4d741bc560dd19306d4624d7c8a88aea537f4e6f/platform/core-api/src/com/intellij/openapi/editor/event/DocumentListener.java?_ga=2.242772421.694060030.1650200348-2033576375.1648230492>`_.
@@ -72,7 +70,6 @@ Questions:
 Notes
 =====
 To do plugin development, open the `Internal Actions Menu <https://plugins.jetbrains.com/docs/intellij/internal-actions-intro.html>`_.
-
 
 
 Source
@@ -88,3 +85,5 @@ Source
     src/main/kotlin/com/github/bjones1/intellij/codechat/listeners/MyProjectManagerListener.kt
     src/main/kotlin/com/github/bjones1/intellij/codechat/services/ApplicationService.kt
     src/main/kotlin/com/github/bjones1/intellij/codechat/services/ProjectService.kt
+    src/main/kotlin/com/github/bjones1/intellij/codechat/settings/AppSettingsConfigurable.kt
+    src/main/kotlin/com/github/bjones1/intellij/codechat/settings/AppSettingsComponent.kt

@@ -48,14 +48,14 @@ It is displayed on the plugin page in the Marketplace.
         Declare a `setting <https://plugins.jetbrains.com/docs/intellij/settings-guide.html>`_ to hold the path to the CodeChat Server executable.
 
         -   Choose a parentId of ``language`` because that's where the Markdown settings are, and CodeChat seems similar in spirit in some ways.
-        -   TODO: instance is a subclass of ``Configurable`` which defines all the CodeChat settings. It seems like id is the same thing.
+        -   ``instance`` is a subclass of ``Configurable`` which defines all the CodeChat settings.
+        -->
         <applicationConfigurable
                 parentId="language"
-                instance="com.github.bjones1.intellij.codechat.Settings"
-                id="com.github.bjones1.intellij.codechat.Settings"
+                instance="com.github.bjones1.intellij.codechat.settings.AppSettingsConfigurable"
+                id="com.github.bjones1.intellij.codechat.settings.AppSettingsConfigurable"
                 displayName="CodeChat"
         />
-        -->
     </extensions>
 
 
